@@ -1,0 +1,11 @@
+Requirement List
+
+This is:
+  - Generalized Dice rolling application for desktop
+  - Not targeted towards a single table-top game
+  - Implements “Common Dice Notation” https://en.wikipedia.org/wiki/Dice_notation
+  - Sleek GUI
+This is cool because:
+  - Alias system for building roll presets
+  - Map aliases to quick buttons (like soundboard)
+  - Dice rolling animations
