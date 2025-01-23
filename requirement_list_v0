@@ -1,0 +1,22 @@
+Requirement List
+
+This is:
+  - Generalized Dice rolling application for desktop
+  - Not targeted towards a single table-top game
+  - Implements “Common Dice Notation” https://en.wikipedia.org/wiki/Dice_notation
+  - Sleek GUI
+This is cool because:
+  - Alias system for building roll presets
+  - Map aliases to quick buttons (like soundboard)
+  - Dice rolling animations
+
+TODO::
+1. Special Dice. Customizable probability. Ideas can be drawn from probability theory, and distribution, statistics. 
+2. Have an idea of what your dice rolling will be. 
+3. Decide a framework for your GUI. 
+4. Implements “Common Dice Notation”, maybe regex, maybe something else, tokenizer. 
+5. Modular, do the model part, without GUI, 
+6. Alias system for building roll presets
+7. Map aliases to quick buttons (like soundboard)
+Question:
+1. You are looking for a PC platform for your GUI, that can be potentially cross-platform later. 
