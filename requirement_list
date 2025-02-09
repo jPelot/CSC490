@@ -1,0 +1,60 @@
+Requirement List
+
+This is:
+  - Generalized Dice rolling application for desktop
+  - Not targeted towards a single table-top game
+  - Implements “Common Dice Notation” https://en.wikipedia.org/wiki/Dice_notation
+  - Sleek GUI
+This is cool because:
+  - Alias system for building roll presets
+  - Map aliases to quick buttons (like soundboard)
+  - Dice rolling animations
+
+Milestone 1: Core Dice Rolling Engine
+Decide on a framework. A quick search + chatGPT offers me the following options:
+      Best Choice Based on Your Stack
+      Python → Panda3D or PyOpenGL
+      C# → Unity
+      C++ → Unreal Engine
+      JavaScript/Electron → Three.js
+      If You Want Realistic Physics-Based Dice Rolling
+      Unity (C#): Best for real-time physics-based dice
+      Unreal Engine (C++): Best for high-quality physics
+      If You Want Simple 3D Dice with Animations
+      Panda3D (Python): Easier to integrate into a Python app
+      Three.js (JavaScript/Electron): Good if you're using web technologies
+Implement dice parsing engine that supports common dice notation (XdY+Z, advantage/disadvantage rolls).
+Add support for aliases, allowing users to define and save custom rolls.
+Implement file-based configuration persistence for saving/loading user settings.
+
+Milestone 2: Basic GUI & User Interaction
+Develop a graphical user interface (GUI) with essential components (input fields, buttons, alias management).
+Implement user-friendly alias management (creating, editing, and deleting custom rolls).
+Add hotkey customization for quick dice rolling actions.
+
+Milestone 3: Configuration & Customization
+Enable full customization of the dice-rolling environment, including user-defined constants and macros. (This may mean things like special dice in games like Arkham Horror)
+https://boardgamegeek.com/geeklist/1513/games-that-use-unique-dice
+Implement a flexible system for saving and loading configurations.
+Ensure the UI allows intuitive interaction with saved configurations and hotkeys.
+
+Milestone 4: Dice Rolling Visualization
+Implement dice rolling visualization (either 2D animation or full 3D physics-based dice rolling).
+Integrate smooth animations to enhance user engagement.
+Ensure the visual representation reflects the actual dice roll results.
+
+Milestone 5: Final Refinements & Testing
+Optimize performance and polish the user experience (UI improvements, error handling).
+Implement optional fun features (sound effects, animations, or additional customization options).
+Conduct extensive testing, fix bugs, and finalize project documentation.
+
+TODO::
+1. Special Dice. Customizable probability. Ideas can be drawn from probability theory, and distribution, statistics. 
+2. Have an idea of what your dice rolling will be. 
+3. Decide a framework for your GUI. 
+4. Implements “Common Dice Notation”, maybe regex, maybe something else, tokenizer. 
+5. Modular, do the model part, without GUI, 
+6. Alias system for building roll presets
+7. Map aliases to quick buttons (like soundboard)
+Question:
+1. (DONE) You are looking for a PC platform for your GUI, that can be potentially cross-platform later. 
