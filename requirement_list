@@ -1,4 +1,5 @@
-Requirement List
+Name: TBA
+
 
 This is:
   - Generalized Dice rolling application for desktop
@@ -11,7 +12,7 @@ This is cool because:
   - Dice rolling animations
 
 Milestone 1: Core Dice Rolling Engine
-Decide on a framework. A quick search + chatGPT offers me the following options:
+(DONE, we choose javafx) Decide on a framework. A quick search + chatGPT offers me the following options:
       Best Choice Based on Your Stack
       Python → Panda3D or PyOpenGL
       C# → Unity
@@ -23,9 +24,9 @@ Decide on a framework. A quick search + chatGPT offers me the following options:
       If You Want Simple 3D Dice with Animations
       Panda3D (Python): Easier to integrate into a Python app
       Three.js (JavaScript/Electron): Good if you're using web technologies
-Implement dice parsing engine that supports common dice notation (XdY+Z, advantage/disadvantage rolls).
-Add support for aliases, allowing users to define and save custom rolls.
-Implement file-based configuration persistence for saving/loading user settings.
+(DONE) Implement dice parsing engine that supports common dice notation (XdY+Z, advantage/disadvantage rolls).
+(DOING) Add support for aliases, allowing users to define and save custom rolls.
+(DOING) Implement file-based configuration persistence for saving/loading user settings.
 
 Milestone 2: Basic GUI & User Interaction
 Develop a graphical user interface (GUI) with essential components (input fields, buttons, alias management).
