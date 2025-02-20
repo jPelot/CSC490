@@ -1,0 +1,45 @@
+.root {
+    -fx-background-color: #1e1e1e;
+    -fx-padding: 15px;
+}
+
+.label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+}
+
+.text-field {
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #444444;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.button {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #555555;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
+}
+
+.button:hover {
+    -fx-background-color: #505050;
+}
+
+.list-view {
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #444444;
+}
+
+.list-cell {
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: #ffffff;
+}
+
+.list-cell:selected {
+    -fx-background-color: #505050;
+    -fx-text-fill: #ffffff;
+}
