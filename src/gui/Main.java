@@ -4,11 +4,10 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 
 import java.io.*;
 import java.util.*;
@@ -20,6 +19,9 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Polygon;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.scene.text.Font;
 
@@ -38,6 +40,14 @@ public class Main extends Application {
     private ListView<String> aliasListView;
     private VBox buttonContainer;
     private ListView<String> quickRollListView;
+    
+    
+    private static final int DICE_SIZE = 80;
+    private final Random random1 = new Random();
+    //private final Pane dicePane = new Pane();
+    private final List<Polygon> diceShapes = new ArrayList<>();
+    private final List<Text> diceTexts = new ArrayList<>();
+    private static final int NUM_DICE = 3; // Change this to set the number of dice
     
     public static void main(String[] args) {
         launch(args);
@@ -122,12 +132,56 @@ public class Main extends Application {
                 new Label("Aliases:"), aliasListView, aliasInputBox, deleteButton, addQuickRollButton,
                 new Label("Quick Roll Buttons:"), quickRollListView, removeQuickRollButton, buttonContainer);
         vbox.setPadding(new Insets(15));
-        vbox.getStyleClass().add("root");
-
-        Scene scene = new Scene(vbox, 500, 600);
+        //vbox.getStyleClass().add("root");
+        
+        Pane dicePane = new Pane();
+        dicePane.setBackground(new Background(new BackgroundFill(Color.GRAY, null, null)));
+        
+        for (int i = 0; i < NUM_DICE; i++) {
+            Polygon d20Shape = createD20Shape();
+            Text numberText = new Text("20");
+            numberText.setFont(Font.font(30));
+            numberText.setFill(Color.WHITE);
+            
+            diceShapes.add(d20Shape);
+            diceTexts.add(numberText);
+            dicePane.getChildren().addAll(d20Shape, numberText);
+        }
+        clipChildren(dicePane);
+        
+        
+        HBox hbox = new HBox(vbox, dicePane);
+        hbox.getStyleClass().add("root");
+        HBox.setHgrow(dicePane, Priority.ALWAYS);
+        Scene scene = new Scene(hbox, 800, 600);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+    
+    private void clipChildren(Region region) {
+        final Rectangle clipPane = new Rectangle();
+        region.setClip(clipPane);
+        // In case we want to make a resizable pane we need to update
+        // our clipPane dimensions
+        region.layoutBoundsProperty().addListener((ov, oldValue, newValue) -> {
+            clipPane.setWidth(newValue.getWidth());
+            clipPane.setHeight(newValue.getHeight());
+        });
+    }
+    
+    private Polygon createD20Shape() {
+        Polygon polygon = new Polygon(
+            0, -DICE_SIZE,
+            DICE_SIZE * 0.95, -DICE_SIZE * 0.31,
+            DICE_SIZE * 0.59, DICE_SIZE * 0.81,
+            -DICE_SIZE * 0.59, DICE_SIZE * 0.81,
+            -DICE_SIZE * 0.95, -DICE_SIZE * 0.31
+        );
+        polygon.setFill(Color.RED);
+        polygon.setStroke(Color.BLACK);
+        polygon.setStrokeWidth(3);
+        return polygon;
     }
     
 
