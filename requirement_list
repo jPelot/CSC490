@@ -25,19 +25,19 @@ Milestone 1: Core Dice Rolling Engine
       Panda3D (Python): Easier to integrate into a Python app
       Three.js (JavaScript/Electron): Good if you're using web technologies
 (DONE) Implement dice parsing engine that supports common dice notation (XdY+Z, advantage/disadvantage rolls).
-(DOING) Add support for aliases, allowing users to define and save custom rolls.
-(DOING) Implement file-based configuration persistence for saving/loading user settings.
+(DONE) Add support for aliases, allowing users to define and save custom rolls.
+(DONE) Implement file-based configuration persistence for saving/loading user settings.
 
 Milestone 2: Basic GUI & User Interaction
-Develop a graphical user interface (GUI) with essential components (input fields, buttons, alias management).
-Implement user-friendly alias management (creating, editing, and deleting custom rolls).
-Add hotkey customization for quick dice rolling actions.
+(DONE) Develop a graphical user interface (GUI) with essential components (input fields, buttons, alias management).
+(DONE) Implement user-friendly alias management (creating, editing, and deleting custom rolls).
+(DONE) Add hotkey customization for quick dice rolling actions.
 
 Milestone 3: Configuration & Customization
-Enable full customization of the dice-rolling environment, including user-defined constants and macros. (This may mean things like special dice in games like Arkham Horror)
+(SKIP for now) Enable full customization of the dice-rolling environment, including user-defined constants and macros. (This may mean things like special dice in games like Arkham Horror)
 https://boardgamegeek.com/geeklist/1513/games-that-use-unique-dice
-Implement a flexible system for saving and loading configurations.
-Ensure the UI allows intuitive interaction with saved configurations and hotkeys.
+(DOING) Implement a flexible system for saving and loading configurations.
+(DONE) Ensure the UI allows intuitive interaction with saved configurations and hotkeys.
 
 Milestone 4: Dice Rolling Visualization
 Implement dice rolling visualization (either 2D animation or full 3D physics-based dice rolling).
