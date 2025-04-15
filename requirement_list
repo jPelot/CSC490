@@ -36,17 +36,17 @@ Milestone 2: Basic GUI & User Interaction
 Milestone 3: Configuration & Customization
 (SKIP for now) Enable full customization of the dice-rolling environment, including user-defined constants and macros. (This may mean things like special dice in games like Arkham Horror)
 https://boardgamegeek.com/geeklist/1513/games-that-use-unique-dice
-(DOING) Implement a flexible system for saving and loading configurations.
+(Doing) Implement a flexible system for saving and loading configurations.
 (DONE) Ensure the UI allows intuitive interaction with saved configurations and hotkeys.
 
 Milestone 4: Dice Rolling Visualization
-Implement dice rolling visualization (either 2D animation or full 3D physics-based dice rolling).
-Integrate smooth animations to enhance user engagement.
-Ensure the visual representation reflects the actual dice roll results.
+(Doing) Implement dice rolling visualization (either 2D animation or full 3D physics-based dice rolling).
+(Done) Integrate smooth animations to enhance user engagement.
+(Doing) Ensure the visual representation reflects the actual dice roll results.
 
 Milestone 5: Final Refinements & Testing
 Optimize performance and polish the user experience (UI improvements, error handling).
-Implement optional fun features (sound effects, animations, or additional customization options).
+(Doing) Implement optional fun features (sound effects, animations, or additional customization options).
 Conduct extensive testing, fix bugs, and finalize project documentation.
 
 TODO::
