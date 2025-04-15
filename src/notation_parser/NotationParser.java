@@ -1,8 +1,10 @@
 package notation_parser;
 
+import java.util.HashMap;
+
 public abstract class NotationParser {
 	
-	private static Die parseElement(Lexer lex) {
+	private static Die parseElement(Lexer lex, DieExpression exp, HashMap<String, String> aliases) {
 		
 		if(lex.atEnd()) return null;
 		
@@ -20,6 +22,18 @@ public abstract class NotationParser {
 			first = lex.curNumber();
 			lex.next();
 		}
+		
+		if(lex.isAlias()) {
+			String alias = lex.curAlias();
+			DieExpression temp = parse(aliases.get(alias), aliases);
+			if (die.positive == false) {
+				temp.negate();
+			}
+			exp.add(temp);
+			
+			return null;
+		}
+		
 		
 		if(lex.checkConsumeOp("d")) {
 			
@@ -42,13 +56,13 @@ public abstract class NotationParser {
 		return die;
 	}
 	
-	public static DieExpression parse(String input) {
+	public static DieExpression parse(String input, HashMap<String, String> aliases) {
 		
 		DieExpression expression = new DieExpression();
 		Lexer lex = new Lexer(input);
 		Die die;
 		
-		while((die = parseElement(lex)) != null) {
+		while((die = parseElement(lex, expression, aliases)) != null) {
 			expression.addDie(die);
 		}
 		

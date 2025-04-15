@@ -1,1 +1,6 @@
-Nice=1d69
+*lotta_d20s=1d20+1d20+1d20+1d20+1d20+1d20+1d20+1d20+1d20+1d20+1d20+1d20+1d20+1d20+1d20
+sword=5d8+2
+*knife=2d6+2
+test=knife+1
+d=1
+longsword=1d20

@@ -7,7 +7,7 @@ import notation_parser.DieExpression;
 
 public class ResultSet {
 	
-	int totalResult;
+	Integer totalResult;
 	ArrayList<Integer> results;
 	DieExpression expression;
 	
@@ -22,5 +22,17 @@ public class ResultSet {
 		results.add(result);
 	}
 	
+	public String toString() {
+		String out = "";
+		for (Integer i : results) {
+			out += i.toString() + ", ";
+		}
+		out += " = " + this.totalResult.toString();
+		return out;
+	}
+	
+	public ArrayList<Integer> results() {
+		return this.results;
+	}
 	
 }

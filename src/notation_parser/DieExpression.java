@@ -38,4 +38,16 @@ public class DieExpression {
 		}
 		return out;
 	}
+	
+	public void add(DieExpression exp) {
+		for (Die d : exp.dice()) {
+			this.expression.add(d);
+		}
+	}
+	
+	public void negate() {
+		for (Die d : this.expression) {
+			d.positive = !d.positive;
+		}
+	}
 }
