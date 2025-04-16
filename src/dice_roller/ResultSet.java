@@ -35,4 +35,8 @@ public class ResultSet {
 		return this.results;
 	}
 	
+	public DieExpression expression() {
+		return this.expression;
+	}
+	
 }
